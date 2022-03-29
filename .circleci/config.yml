@@ -1,0 +1,23 @@
+version: 2.1
+
+orbs:
+  torque: quali/torque@1.0.0
+jobs:
+  test:
+    docker:
+      - image: circleci/ruby:2.4.1
+    steps:
+      - torque/start-sandbox:
+          sandbox-name: "test"
+          blueprint: "Jenkins"
+          inputs: "{'AWS_INSTANCE_TYPE': 'm5.large','CS_TORQUE_TOKEN': 'abc', 'SPACE_NAME': 'Trial', 'JENKINS_ADMIN_PASS': 'admin', 'IAM_ROLE': 's3access-profile', 'BUCKET_NAME': 'tyest1'}"
+      - run:
+          name: Functional test
+          command: |
+            sleep 10
+      - torque/end-sandbox:
+          sandbox-id: SANDBOX_ID
+workflows:
+  leadeasy:
+    jobs:
+      - test:
