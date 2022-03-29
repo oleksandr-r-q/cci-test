@@ -20,4 +20,4 @@ jobs:
 workflows:
   leadeasy:
     jobs:
-      - test:
+      - test
