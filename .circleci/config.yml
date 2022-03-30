@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  torque: quali/torque@dev:alpha
+  torque: quali/torque@1
 jobs:
   test:
     docker:
