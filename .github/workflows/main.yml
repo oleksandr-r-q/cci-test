@@ -12,7 +12,7 @@ jobs:
     steps:
     - name: Start Torque Sandbox
       id: start-sandbox
-      uses: QualiTorque/torque-start-sb-action@dev
+      uses: QualiTorque/torque-start-sb-action@v0.1
       with:
         space: Sample
         blueprint_name: "[Sample]Bitnami Nginx Helm Chart"
@@ -27,7 +27,7 @@ jobs:
         echo "Sandbox details are: ${{ steps.start-sandbox.outputs.sandbox_details }}"
 
     - name: Stop sandbox
-      uses: QualiTorque/torque-end-sb-action@dev
+      uses: QualiTorque/torque-end-sb-action@v0.1
       with:
         space: Sample
         sandbox_id: ${{ steps.start-sandbox.outputs.sandbox_id }}
