@@ -13,8 +13,9 @@ jobs:
       id: start-sandbox
       uses: QualiTorque/torque-start-sb-action@dev
       with:
-        space: DBS
-        blueprint_name: hello
+        space: Sample
+        blueprint_name: Bitnami Nginx Helm Chart
+        inputs: 'replicaCount=1'
         torque_token: ${{ secrets.TORQUE_TOKEN }}
         timeout: 30
 
