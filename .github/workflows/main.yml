@@ -12,7 +12,7 @@ jobs:
     steps:
     - name: Start Torque Sandbox
       id: start-sandbox
-      uses: QualiTorque/torque-start-sb-action@v0.1.1
+      uses: QualiTorque/torque-start-sb-action@dev
       with:
         space: Sample
         blueprint_name: "[Sample]Bitnami Nginx Helm Chart"
