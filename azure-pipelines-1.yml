@@ -1,0 +1,17 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+
+steps:
+- task: StartSandbox@0
+  inputs:
+    torqueEndpoint: 'Torque-Dima'
+    timeout: '20'
+    space: 'Sample'
+    blueprint: 'abc'
+    sandbox: 'aece'
