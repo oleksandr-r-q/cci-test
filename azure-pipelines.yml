@@ -7,10 +7,11 @@ trigger:
 - master
 
 steps:
+
 - task: StartSandbox@0
   inputs:
     torqueEndpoint: 'Torque-Dima'
     timeout: '20'
     space: 'Sample'
     blueprint: '[Sample]Bitnami Nginx Helm Chart'
-    sandbox: 'rew'
+    sandbox: 'dsf'
