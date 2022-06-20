@@ -13,5 +13,6 @@ steps:
     torqueEndpoint: 'Torque-Dima'
     timeout: '20'
     space: 'Sample'
-    blueprint: 'abc'
+    blueprint: '[Sample]Bitnami Nginx Helm Chart'
     sandbox: 'aece'
+    inputs: 'replicaCount=1'
