@@ -9,6 +9,7 @@ trigger:
 
 steps:
 - task: StartSandbox@0
+  name: 'Torque'
   inputs:
     torqueEndpoint: 'Torque-Dima'
     timeout: '20'
