@@ -14,7 +14,7 @@ jobs:
       - run:
           name: Functional test
           command: |
-            sleep 10
+            sleep 15
       - torque/end-sandbox:
           sandbox-id: SANDBOX_ID
 workflows:
