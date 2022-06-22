@@ -8,9 +8,9 @@ jobs:
       - image: circleci/ruby:2.4.1
     steps:
       - torque/start-sandbox:
-          sandbox-name: "jenkins"
-          blueprint: "Jenkins"
-          inputs: "{'AWS_INSTANCE_TYPE': 'm5.large','CS_TORQUE_TOKEN': 'abc', 'SPACE_NAME': 'Trial', 'JENKINS_ADMIN_PASS': 'admin', 'IAM_ROLE': 's3access-profile', 'BUCKET_NAME': 'tyest1'}"
+          sandbox-name: "test"
+          blueprint: "[Sample]Bitnami Nginx Helm Chart"
+          inputs: "{'replicaCount': '1'}"
       - run:
           name: Functional test
           command: |
