@@ -19,6 +19,6 @@ steps:
     inputs: 'replicaCount=1'
 - task: EndSandbox@0
   inputs:
-    torqueEndpoint: 'Torque-Dima'
+    torqueEndpoint: 'Torque-Dmytro'
     space: 'Sample'
     sandboxId: '$(Torque.Sandbox_Id)'
