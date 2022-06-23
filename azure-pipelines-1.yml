@@ -6,6 +6,7 @@
 trigger:
 - master
 
+
 steps:
 - task: StartSandbox@0
   name: 'Torque'
