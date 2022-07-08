@@ -19,7 +19,6 @@ jobs:
         inputs: "replicaCount=1"
         torque_token: ${{ secrets.TORQUE_TOKEN }}
         timeout: 30
-        duration: 10
 
     - name: Testing
       id: test-app
