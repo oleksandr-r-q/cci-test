@@ -16,7 +16,7 @@ jobs:
         space: dev
         blueprint_name: jira
         torque_token: ${{ secrets.TORQUE_TOKEN }}
-        torque_url: https://preview.qtorque.io
+        torque_url: preview.qtorque.io
         timeout: 30
         branch: main
 
