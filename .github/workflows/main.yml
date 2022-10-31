@@ -18,13 +18,12 @@ jobs:
         torque_token: ${{ secrets.TORQUE_TOKEN }}
         torque_hostname: preview.qtorque.io
         timeout: 30
-        branch: main
 
-#     - name: Testing
-#       id: test-app
-#       run: |
-#         echo "Running tests against sandbox with id: ${{ steps.start-sandbox.outputs.sandbox_id }}"
-#         echo "Sandbox details are: ${{ steps.start-sandbox.outputs.sandbox_details }}"
+    - name: Testing
+      id: test-app
+      run: |
+        echo "Running tests against sandbox with id: ${{ steps.start-sandbox.outputs.sandbox_id }}"
+        echo "Sandbox details are: ${{ steps.start-sandbox.outputs.sandbox_details }}"
 
 #     - name: Stop sandbox
 #       uses: QualiTorque/torque-end-sb-action@dev
