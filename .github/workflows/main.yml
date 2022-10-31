@@ -11,23 +11,23 @@ jobs:
     steps:
     - name: Start Torque Sandbox
       id: start-sandbox
-      uses: QualiTorque/torque-start-sb-action@dev
+      uses: QualiTorque/torque-start-sb-action@dockerize
       with:
-        space: Sample
-        blueprint_name: "[Sample]Bitnami Nginx Helm Chart"
-        inputs: "replicaCount=1"
+        space: dev
+        blueprint_name: jira
         torque_token: ${{ secrets.TORQUE_TOKEN }}
+        torque_url: https://preview.qtorque.io
         timeout: 30
 
-    - name: Testing
-      id: test-app
-      run: |
-        echo "Running tests against sandbox with id: ${{ steps.start-sandbox.outputs.sandbox_id }}"
-        echo "Sandbox details are: ${{ steps.start-sandbox.outputs.sandbox_details }}"
+#     - name: Testing
+#       id: test-app
+#       run: |
+#         echo "Running tests against sandbox with id: ${{ steps.start-sandbox.outputs.sandbox_id }}"
+#         echo "Sandbox details are: ${{ steps.start-sandbox.outputs.sandbox_details }}"
 
-    - name: Stop sandbox
-      uses: QualiTorque/torque-end-sb-action@dev
-      with:
-        space: Sample
-        sandbox_id: ${{ steps.start-sandbox.outputs.sandbox_id }}
-        torque_token: ${{ secrets.TORQUE_TOKEN }} 
+#     - name: Stop sandbox
+#       uses: QualiTorque/torque-end-sb-action@dev
+#       with:
+#         space: Sample
+#         sandbox_id: ${{ steps.start-sandbox.outputs.sandbox_id }}
+#         torque_token: ${{ secrets.TORQUE_TOKEN }} 
