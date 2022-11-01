@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+    - uses: actions/checkout@v2
     - name: Start Torque Sandbox
       id: start-sandbox
       uses: QualiTorque/torque-start-sb-action@dockerize
