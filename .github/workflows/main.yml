@@ -31,6 +31,6 @@ jobs:
       uses: QualiTorque/torque-end-sb-action@dockerize
       with:
         space: Sample
-        environment_id: ${{ steps.start-sandbox.outputs.sandbox_id }}
+        environment_id: ${{ steps.start-sandbox.outputs.environment_id }}
         torque_token: ${{ secrets.TORQUE_TOKEN }}
         torque_hostname: preview.qtorque.io
