@@ -28,7 +28,7 @@ jobs:
         echo "Sandbox details are: ${{ steps.start-sandbox.outputs.environment_details }}"
 
     - name: Stop sandbox
-      uses: QualiTorque/torque-end-sb-action@dockerize
+      uses: QualiTorque/torque-end-environment@v1  
       with:
         space: Sample
         environment_id: ${{ steps.start-sandbox.outputs.environment_id }}
