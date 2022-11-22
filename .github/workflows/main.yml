@@ -12,7 +12,7 @@ jobs:
     - uses: actions/checkout@v3
     - name: Start Torque Sandbox
       id: start-sandbox
-      uses: QualiTorque/torque-environment-start@dev
+      uses: QualiTorque/torque-start-environment@dev
       with:
         space: dev
         blueprint_name: nginx
