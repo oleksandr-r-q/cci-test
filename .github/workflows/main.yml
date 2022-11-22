@@ -12,20 +12,22 @@ jobs:
     - uses: actions/checkout@v3
     - name: Start Torque Sandbox
       id: start-sandbox
-      uses: QualiTorque/torque-start-sb-action@v0.1.2
+      uses: QualiTorque/torque-environment-start@dev
       with:
         space: dev
         blueprint_name: nginx
+        repository_name: qa-assets # new param
         environment_name: abc
         torque_token: ${{ secrets.TORQUE_TOKEN }}
-        torque_hostname: preview.qtorque.io
-        timeout: 30
+        torque_hostname: preview.qtorque.io # only hostname, without schema
+        timeout: 30 
 
     - name: Testing
       id: test-app
       run: |
         echo "Running tests against sandbox with id: ${{ steps.start-sandbox.outputs.environment_id }}"
         echo "Sandbox details are: ${{ steps.start-sandbox.outputs.environment_details }}"
+        sleep 30
 
     - name: Stop sandbox
       uses: QualiTorque/torque-end-environment@v1  
