@@ -9,10 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v1
     - name: Start Torque Sandbox
       id: start-sandbox
-      uses: QualiTorque/torque-start-environment@dev
+      uses: QualiTorque/torque-start-environment@v1
       with:
         space: dev
         blueprint_name: nginx
@@ -20,7 +20,7 @@ jobs:
         environment_name: abc
         torque_token: ${{ secrets.TORQUE_TOKEN }}
         torque_hostname: preview.qtorque.io # only hostname, without schema
-        timeout: 30 
+        timeout: 5 # set timeout in minutes if you want to wait until env is active
 
     - name: Testing
       id: test-app
